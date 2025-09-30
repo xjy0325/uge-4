@@ -56,13 +56,11 @@ void Game() {
 
     // output score
     printf("👫\t vs 🤖\t\n%d\t%d\t\n", PlayerCounter, AgentCounter);
-  } while (PlayerCounter == 7 || AgentCounter++ == 7);
+  } while (PlayerCounter < 7 && AgentCounter < 7);
 
   // output winner
   if (PlayerCounter < AgentCounter) {
     puts("🤖 Agent won !");
-  } else if (PlayerCounter == AgentCounter) {
-    puts("👫BIG TIE🤖");
   } else {
     puts("🤖 Player won !");
   }
