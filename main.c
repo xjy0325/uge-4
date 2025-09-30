@@ -18,7 +18,7 @@ void Game() {
   puts("Select a shape:\n0🪨  || 1🦎  || 2✂️  || 3🗒️  || 4🖖 :");
 
   // declare variables
-  int PlayerCounter = 0, AgentCounter = 0, GameRound = 1;
+  int PlayerCounter = 0, AgentCounter = 0;
   int GameInput = 0, digit = 0;
 
   do {
@@ -54,12 +54,9 @@ void Game() {
       AgentCounter++;
     }
 
-    // count gameround
-    GameRound++;
-
     // output score
     printf("👫\t vs 🤖\t\n%d\t%d\t\n", PlayerCounter, AgentCounter);
-  } while (GameRound <= GameChance);
+  } while (PlayerCounter == 7 || AgentCounter++ == 7);
 
   // output winner
   if (PlayerCounter < AgentCounter) {
